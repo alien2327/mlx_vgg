@@ -1,0 +1,4 @@
+numpy
+pillow
+mlx
+h5py
