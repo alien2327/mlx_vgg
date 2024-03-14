@@ -68,6 +68,9 @@ class VGG19(nn.Module):
             self.predictions = nn.Linear(4096, 1000)                      # 19
             self.dropout = nn.Dropout(dropout)
     
+        if use_weight:
+            self.load_weights()
+    
     def __call__(
         self,
         x:mx.array,

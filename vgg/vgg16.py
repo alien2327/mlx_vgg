@@ -62,6 +62,9 @@ class VGG16(nn.Module):
             self.fc2 = nn.Linear(  4096, 4096)                            # 15
             self.predictions = nn.Linear(4096, 1000)                      # 16
             self.dropout = nn.Dropout(dropout)
+        
+        if use_weight:
+            self.load_weights()
     
     def __call__(
         self,
